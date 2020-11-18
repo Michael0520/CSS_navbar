@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-header {
+    background: linear-gradient(0deg, green, yellow)
+}
+
+.main-header .main-container {
+    display: flex;
+    flex-direction: column;
+    /* 主軸 */
+    align-items: center;
+    /* 次軸 */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-header .logo {
+    width: 130px;
+}
+
+.main-header .logo img {
+    width: 100%;
+    /* vertical-align: middle; */
+}
+
+.main-container .main-nav {
+    display: flex;
+}
+
+.main-header .main-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 1em;
+    position: relative;
+    transform: translateY(0px);
+    transition: .3s;
+}
+
+.main-header .main-nav a:hover {
+    transform: translateY(-10px);
+}
+
+.main-header .main-nav a:nth-child(3) {
+    /*選取第三個 a 標籤*/
+    margin-left: 140px;
+}
+
+.main-header .main-nav a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 0;
+    border-bottom: 1px solid white;
+    transition: .3s;
+}
+
+.main-header .main-nav a:hover:after {
+    left: 0;
+    right: 0;
+}
